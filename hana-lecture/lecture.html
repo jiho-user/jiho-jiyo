@@ -1,0 +1,434 @@
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+
+html { scroll-behavior: smooth; }
+#sub_banner { display: none; }
+.about_cont.contents_in.w1230 { max-width: 100% !important; }
+
+/* ===== 회차별 키워드 컬러 (하나 브랜드 컬러) ===== */
+.lec-v1 { --c: #009178; --ink: #ffffff; --soft: #E3F3EF; }  /* 일   : Hana Green */
+.lec-v2 { --c: #EFAB3C; --ink: #004E42; --soft: #FDF2DF; }  /* 돈   : Hana Digital Orange */
+.lec-v3 { --c: #E864C1; --ink: #ffffff; --soft: #FCE8F6; }  /* 마음 : Hana Digital Pink */
+.lec-v4 { --c: #A72DF5; --ink: #ffffff; --soft: #F3E6FE; }  /* AI   : Hana Digital Purple */
+
+.hanajob_wrap, .lec { font-family: 'Pretendard Variable', Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', '맑은 고딕', sans-serif; }
+.lec *, .hanajob_wrap .lec-poster * { box-sizing: border-box; margin: 0; padding: 0; }
+.lec { color: #004E42; line-height: 1.6; font-size: 17px; background: #ffffff; word-break: keep-all; }
+.lec a { text-decoration: none; }
+.lec .inner { max-width: 1230px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 1; }
+.lec .sec { padding: 100px 0; }
+.lec .eyebrow { display: block; text-align: center; font-size: 15px; font-weight: 800; letter-spacing: 0.2em; color: #009178; margin-bottom: 10px; }
+.lec .stit { font-size: 40px; font-weight: 900; color: #004E42; text-align: center; letter-spacing: -0.04em; line-height: 1.3; }
+.lec .sdesc { font-size: 19px; color: #666; text-align: center; margin: 14px 0 56px; }
+
+/* ===== TOP SECTION ===== */
+.hanajob_top_wrap { background: #ffffff !important; padding: 0 !important; }
+.hanajob_top { display: flex !important; align-items: stretch !important; gap: 48px !important; }
+.hanajob_top_img { flex: 1 !important; width: 50% !important; margin: 0 !important; padding: 0 !important; display: flex !important; align-items: center !important; }
+.hanajob_top_img img { width: 100% !important; height: auto !important; display: block !important; border-radius: 0 !important; }
+.hanajob_top_con { flex: 1 !important; width: 50% !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; padding: 6px 0 !important; gap: 0 !important; }
+.hanajob_top_con h1 { font-size: 40px !important; font-weight: 900 !important; color: #004E42 !important; margin: 0 0 10px !important; letter-spacing: -0.04em !important; line-height: 1.25 !important; }
+.hanajob_wrap .lec-top-eyebrow { display: inline-block; font-size: 15px; font-weight: 700; color: #009178; background: #E3F3EF; border-radius: 30px; padding: 5px 14px; margin: 0 0 14px; }
+.hanajob_wrap .lec-top-desc { font-size: 18px; color: #555; line-height: 1.6; margin: 0; word-break: keep-all; }
+.hanajob_wrap .lec-top-keys { display: flex; gap: 8px; margin-top: 18px; }
+.hanajob_wrap .lec-top-keys span { display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 10px; border-radius: 12px; background: var(--c); color: var(--ink); font-size: 19px; font-weight: 900; }
+.hanajob_top_info_dl { display: flex; line-height: 1.5; margin: 0; }
+.hanajob_top_info_dl dt { width: 90px; font-weight: 800; color: #004E42; flex-shrink: 0; font-size: 18px; }
+.hanajob_top_info_dl dd { color: #333; font-size: 18px; margin: 0; word-break: keep-all; }
+.hanajob_top_info_dl .logo { max-height: 24px; vertical-align: middle; }
+.hanajob_wrap .lec-top-note { font-size: 16px; color: #888; margin: 0; }
+.hanajob_top_btn { width: 100% !important; display: block !important; padding: 0 !important; }
+.hanajob_top_btn a { display: block !important; width: 100% !important; text-align: center !important; background: #009178 !important; color: #ffffff !important; font-size: 20px !important; font-weight: 800 !important; padding: 18px 0 !important; border-radius: 8px !important; text-decoration: none !important; transition: background 0.3s !important; box-shadow: none !important; border: none !important; }
+.hanajob_top_btn a:hover { background: #004E42 !important; }
+
+/* 포스터 자리 (디자이너 포스터 나오면 img로 교체) */
+.hanajob_wrap .lec-poster { position: relative; width: 100%; aspect-ratio: 4 / 5; border-radius: 24px; overflow: hidden; background: radial-gradient(90% 60% at 50% 0%, rgba(167, 216, 183, 0.3) 0%, rgba(167, 216, 183, 0) 70%), #004E42; color: #fff; display: flex; flex-direction: column; justify-content: space-between; padding: 44px 40px 40px; }
+.hanajob_wrap .lec-poster::after { content: '?'; position: absolute; right: -30px; top: 40px; font-size: 420px; font-weight: 900; line-height: 1; color: rgba(255, 255, 255, 0.05); transform: rotate(12deg); }
+.hanajob_wrap .lec-poster > span { position: relative; z-index: 1; display: block; }
+.hanajob_wrap .lec-poster .pp-top { font-size: 15px; font-weight: 700; color: rgba(255, 255, 255, 0.8); }
+.hanajob_wrap .lec-poster .pp-sub { display: block; font-size: 20px; font-weight: 700; color: #CEDC00; margin-bottom: 10px; }
+.hanajob_wrap .lec-poster .pp-title { display: block; font-size: 72px; font-weight: 900; line-height: 1.08; letter-spacing: -0.05em; }
+.hanajob_wrap .lec-poster .pp-keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.hanajob_wrap .lec-poster .pp-keys span { display: flex; align-items: center; justify-content: center; aspect-ratio: 1 / 1; border-radius: 18px; background: var(--c); color: var(--ink); font-size: 38px; font-weight: 900; letter-spacing: -0.04em; }
+.hanajob_wrap .lec-poster .pp-date { font-size: 18px; font-weight: 700; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, 0.2); }
+
+/* ===== HOOK (명사 특강 시리즈란?) ===== */
+.lec .hook { position: relative; overflow: hidden; background: radial-gradient(60% 55% at 50% 0%, rgba(167, 216, 183, 0.25) 0%, rgba(167, 216, 183, 0) 70%), #004E42; padding: 100px 0 110px; text-align: center; color: #fff; }
+.lec .hook::before, .lec .hook::after { content: '?'; position: absolute; font-weight: 900; line-height: 1; color: rgba(255, 255, 255, 0.04); pointer-events: none; }
+.lec .hook::before { font-size: 520px; left: -40px; top: -90px; transform: rotate(-14deg); }
+.lec .hook::after { font-size: 400px; right: -20px; bottom: -110px; transform: rotate(14deg); }
+.lec .hook-pill { display: inline-block; font-size: 16px; font-weight: 700; color: #CEDC00; border: 1.5px solid rgba(206, 220, 0, 0.5); border-radius: 50px; padding: 6px 20px; margin-bottom: 22px; }
+.lec .hook-title { font-size: 46px; font-weight: 900; line-height: 1.3; letter-spacing: -0.04em; color: #fff; }
+.lec .hook-title em { font-style: normal; color: #CEDC00; }
+.lec .hook-desc { font-size: 20px; color: rgba(255, 255, 255, 0.82); margin-top: 18px; }
+.lec .q-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1080px; margin: 60px auto 0; }
+.lec .q-tile { display: flex; flex-direction: column; background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18); animation: lecSpot 8s ease-in-out infinite; transition: transform 0.3s, box-shadow 0.3s; }
+.lec .q-tile.lec-v2 { animation-delay: 2s; }
+.lec .q-tile.lec-v3 { animation-delay: 4s; }
+.lec .q-tile.lec-v4 { animation-delay: 6s; }
+.lec .q-grid:hover .q-tile { animation: none; }
+.lec .q-grid .q-tile:hover { transform: translateY(-12px); box-shadow: 0 0 0 4px var(--c), 0 26px 50px rgba(0, 0, 0, 0.35); }
+.lec .q-key { display: flex; align-items: center; justify-content: center; height: 150px; background: var(--c); color: var(--ink); font-size: 72px; font-weight: 900; letter-spacing: -0.05em; }
+.lec .q-txt { display: block; flex: 1; padding: 22px 18px 14px; font-size: 19px; font-weight: 800; color: #004E42; line-height: 1.45; }
+.lec .q-who { display: block; margin: 0 18px; padding: 12px 0 20px; border-top: 1px dashed #D7EDE6; font-size: 15px; font-weight: 800; color: #444; line-height: 1.4; }
+.lec .q-who-lbl { display: block; font-size: 13px; font-weight: 700; color: #999; margin-bottom: 2px; }
+.lec .q-who::after { content: '\00a0↓'; color: #009178; }
+@keyframes lecSpot {
+  0%, 25%, 100% { transform: translateY(0); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18); }
+  8%, 17% { transform: translateY(-12px); box-shadow: 0 0 0 4px var(--c), 0 26px 50px rgba(0, 0, 0, 0.35); }
+}
+
+/* ===== LINE UP (연사 & 특강) ===== */
+.lec .lu-sec { background: #F4F9F7; }
+.lec .lu-list { display: flex; flex-direction: column; gap: 40px; }
+.lec .lu-row { display: grid; grid-template-columns: 400px 1fr; background: #fff; border-radius: 28px; overflow: hidden; box-shadow: 0 14px 40px rgba(0, 78, 66, 0.08); scroll-margin-top: 120px; }
+.lec .lu-row:nth-child(even) { grid-template-columns: 1fr 400px; }
+.lec .lu-row:nth-child(even) .lu-cover { order: 2; }
+.lec .lu-cover { position: relative; overflow: hidden; background: var(--c); color: var(--ink); padding: 40px; display: flex; flex-direction: column; justify-content: space-between; min-height: 440px; }
+.lec .lu-cover::before { content: ''; position: absolute; width: 380px; height: 380px; border-radius: 50%; background: rgba(255, 255, 255, 0.13); right: -150px; top: -150px; }
+.lec .lu-cover > * { position: relative; z-index: 1; }
+.lec .lu-vol { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 900; letter-spacing: 0.08em; }
+.lec .lu-field { font-size: 15px; font-weight: 700; letter-spacing: 0; padding: 3px 12px; border-radius: 30px; border: 1.5px solid currentColor; }
+.lec .lu-key { font-size: 168px; font-weight: 900; line-height: 1; letter-spacing: -0.06em; transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); transform-origin: left bottom; }
+.lec .lec-v3 .lu-key { font-size: 140px; }
+.lec .lu-row:hover .lu-key { transform: scale(1.06) rotate(-3deg); }
+.lec .lu-tease { font-size: 21px; font-weight: 800; line-height: 1.45; }
+.lec .lu-body { padding: 44px 52px; display: flex; flex-direction: column; justify-content: center; }
+.lec .lu-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.lec .lu-chip { display: inline-flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 700; color: #004E42; background: #F1F7F5; border-radius: 8px; padding: 6px 14px; }
+.lec .lu-chip::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--c); }
+.lec .lu-title { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 30px; font-weight: 900; color: #111; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 18px; }
+.lec .lu-title-key { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; padding: 0 10px; border-radius: 12px; background: var(--c); color: var(--ink); font-size: 22px; font-weight: 900; }
+.lec .lu-points { list-style: none; margin-bottom: 26px; }
+.lec .lu-points li { position: relative; padding-left: 32px; font-size: 18px; color: #333; line-height: 1.6; margin-bottom: 6px; }
+.lec .lu-points li::before { content: '✓'; position: absolute; left: 0; top: 3px; width: 22px; height: 22px; border-radius: 50%; background: var(--c); color: var(--ink); font-size: 13px; font-weight: 900; line-height: 22px; text-align: center; }
+.lec .lu-speaker { display: flex; align-items: center; gap: 16px; padding-top: 24px; border-top: 1px dashed #CFE3DC; margin-bottom: 14px; }
+.lec .sp-ava { display: flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: 50%; flex-shrink: 0; object-fit: cover; background: var(--soft); color: #004E42; border: 3px solid var(--c); font-size: 28px; font-weight: 900; }
+.lec .sp-name { font-size: 24px; font-weight: 900; color: #111; line-height: 1.3; }
+.lec .sp-role { display: block; font-size: 16px; font-weight: 600; color: #777; }
+.lec .sp-career { list-style: none; }
+.lec .sp-career li { position: relative; padding-left: 14px; font-size: 17px; color: #555; line-height: 1.75; }
+.lec .sp-career li::before { content: ''; position: absolute; left: 0; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: var(--c); }
+
+/* ===== SCHEDULE ===== */
+.lec .sc-stats { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: -24px 0 48px; }
+.lec .sc-stat { background: #F1F7F5; border-radius: 50px; padding: 9px 22px; font-size: 17px; font-weight: 600; color: #004E42; }
+.lec .sc-stat b { color: #009178; font-weight: 900; }
+.lec .sc-grid { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.lec .sc-grid::before { content: ''; position: absolute; left: 8%; right: 8%; top: 118px; border-top: 2px dashed #A7D8B7; }
+.lec .sc-card { position: relative; background: #fff; border: 1.5px solid #D7EDE6; border-radius: 22px; overflow: hidden; text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+.lec .sc-card:hover { transform: translateY(-8px); box-shadow: 0 16px 36px rgba(0, 78, 66, 0.12); border-color: var(--c); }
+.lec .sc-date { display: block; padding-bottom: 6px; }
+.lec .sc-month { display: block; background: var(--c); color: var(--ink); font-size: 17px; font-weight: 800; padding: 10px 0; letter-spacing: 0.04em; }
+.lec .sc-day { display: block; font-size: 64px; font-weight: 900; color: #004E42; line-height: 1; padding-top: 22px; letter-spacing: -0.04em; }
+.lec .sc-dow { display: block; font-size: 17px; font-weight: 800; color: #009178; margin-top: 8px; }
+.lec .sc-info { display: block; border-top: 1px dashed #D7EDE6; margin: 16px 22px 0; padding: 16px 0 24px; }
+.lec .sc-vol { display: inline-block; background: var(--c); color: var(--ink); font-size: 14px; font-weight: 800; border-radius: 30px; padding: 3px 12px; }
+.lec .sc-who { display: block; font-size: 20px; font-weight: 900; color: #111; margin-top: 10px; }
+.lec .sc-time, .lec .sc-where { display: block; font-size: 16px; color: #666; }
+.lec .sc-time { margin-top: 4px; }
+.lec .sc-note { margin-top: 28px; font-size: 16px; color: #888; line-height: 1.8; }
+
+/* ===== CTA ===== */
+.lec .cta { position: relative; overflow: hidden; background: radial-gradient(60% 90% at 50% 100%, rgba(0, 145, 120, 0.6) 0%, rgba(0, 145, 120, 0) 70%), #004E42; padding: 100px 0; text-align: center; color: #fff; }
+.lec .cta-eyebrow { font-size: 16px; font-weight: 700; color: rgba(255, 255, 255, 0.7); margin-bottom: 14px; }
+.lec .cta-title { font-size: 42px; font-weight: 900; line-height: 1.35; letter-spacing: -0.04em; color: #fff; }
+.lec .cta-keys { display: flex; justify-content: center; gap: 10px; margin-top: 30px; }
+.lec .cta-keys span { display: inline-flex; align-items: center; justify-content: center; min-width: 58px; height: 58px; padding: 0 12px; border-radius: 16px; background: var(--c); color: var(--ink); font-size: 24px; font-weight: 900; }
+.lec .cta-desc { font-size: 19px; color: rgba(255, 255, 255, 0.82); margin-top: 26px; }
+.lec .cta-btn { display: inline-block; margin-top: 36px; background: #CEDC00; color: #004E42 !important; font-size: 21px; font-weight: 900; padding: 20px 76px; border-radius: 60px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); transition: transform 0.3s, background 0.3s; }
+.lec .cta-btn:hover { transform: scale(1.06); background: #d9e820; }
+.lec .cta-logo { display: block; margin: 48px auto 0; max-width: 220px; height: auto; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lec .q-tile { animation: none; }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .lec .lu-row, .lec .lu-row:nth-child(even) { grid-template-columns: 320px 1fr; }
+  .lec .lu-row:nth-child(even) .lu-cover { order: 0; }
+  .lec .lu-key { font-size: 140px; }
+  .lec .lec-v3 .lu-key { font-size: 116px; }
+  .lec .lu-body { padding: 36px 36px; }
+  .lec .sc-grid { grid-template-columns: repeat(2, 1fr); }
+  .lec .sc-grid::before { display: none; }
+}
+
+@media (max-width: 768px) {
+  .hanajob_top { flex-direction: column !important; gap: 24px !important; }
+  .hanajob_top_img, .hanajob_top_con { width: 100% !important; }
+  .hanajob_top_con { gap: 10px !important; }
+  .hanajob_top_con h1 { font-size: 28px !important; }
+  .hanajob_wrap .lec-top-desc { font-size: 17px; }
+  .hanajob_top_btn a { font-size: 18px !important; padding: 15px 0 !important; margin-top: 8px; }
+  .hanajob_top_info_dl { gap: 10px; margin-bottom: 4px; }
+  .hanajob_top_info_dl dt { width: 70px; min-width: 70px; font-size: 18px; }
+  .hanajob_top_info_dl dd { font-size: 18px; flex: 1; line-height: 1.6; }
+  .hanajob_wrap .lec-poster { padding: 32px 26px 28px; border-radius: 18px; }
+  .hanajob_wrap .lec-poster .pp-top { font-size: 13px; }
+  .hanajob_wrap .lec-poster .pp-sub { font-size: 17px; }
+  .hanajob_wrap .lec-poster .pp-title { font-size: 52px; }
+  .hanajob_wrap .lec-poster .pp-keys span { font-size: 26px; border-radius: 14px; }
+  .hanajob_wrap .lec-poster .pp-date { font-size: 15px; }
+
+  .lec .sec { padding: 64px 0; }
+  .lec .stit { font-size: 29px; }
+  .lec .sdesc { font-size: 17px; margin-bottom: 36px; }
+
+  .lec .hook { padding: 64px 0 72px; }
+  .lec .hook::before { font-size: 320px; }
+  .lec .hook::after { font-size: 260px; }
+  .lec .hook-title { font-size: 31px; }
+  .lec .hook-desc { font-size: 18px; }
+  .lec .q-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 40px; }
+  .lec .q-key { height: 108px; font-size: 52px; }
+  .lec .q-txt { font-size: 17px; padding: 16px 12px 8px; min-height: 0; }
+  .lec .q-who { font-size: 14px; margin: 0 12px; padding: 10px 0 16px; }
+  .lec .q-who-lbl { font-size: 12px; }
+
+  .lec .lu-list { gap: 28px; }
+  .lec .lu-row, .lec .lu-row:nth-child(even) { grid-template-columns: 1fr; border-radius: 22px; }
+  .lec .lu-cover { min-height: 0; padding: 28px 26px; gap: 18px; }
+  .lec .lu-cover::before { width: 260px; height: 260px; right: -100px; top: -100px; }
+  .lec .lu-key { font-size: 112px; }
+  .lec .lec-v3 .lu-key { font-size: 96px; }
+  .lec .lu-tease { font-size: 19px; }
+  .lec .lu-body { padding: 28px 22px 30px; }
+  .lec .lu-chip { font-size: 16px; }
+  .lec .lu-title { font-size: 24px; gap: 10px; }
+  .lec .lu-title-key { display: none; }
+  .lec .lu-points li { font-size: 18px; }
+  .lec .sp-ava { width: 64px; height: 64px; font-size: 24px; }
+  .lec .sp-name { font-size: 22px; }
+  .lec .sp-career li { font-size: 17px; }
+
+  .lec .sc-stats { margin: -12px 0 32px; gap: 8px; }
+  .lec .sc-stat { font-size: 16px; padding: 8px 16px; }
+  .lec .sc-grid { grid-template-columns: 1fr; gap: 14px; }
+  .lec .sc-card { display: flex; align-items: stretch; text-align: left; }
+  .lec .sc-date { flex: 0 0 104px; background: var(--c); color: var(--ink); text-align: center; padding: 18px 0; display: flex; flex-direction: column; justify-content: center; }
+  .lec .sc-month { background: none; color: inherit; padding: 0; font-size: 16px; }
+  .lec .sc-day { color: inherit; font-size: 46px; padding-top: 4px; }
+  .lec .sc-dow { color: inherit; font-size: 15px; margin-top: 4px; }
+  .lec .sc-info { flex: 1; border-top: none; margin: 0; padding: 18px 18px; }
+  .lec .sc-who { font-size: 20px; margin-top: 8px; }
+  .lec .sc-time, .lec .sc-where { font-size: 17px; }
+  .lec .sc-note { font-size: 16px; }
+
+  .lec .cta { padding: 72px 0; }
+  .lec .cta-title { font-size: 30px; }
+  .lec .cta-keys span { min-width: 50px; height: 50px; font-size: 21px; border-radius: 14px; }
+  .lec .cta-desc { font-size: 17px; }
+  .lec .cta-btn { font-size: 19px; padding: 18px 0; width: 100%; max-width: 360px; }
+  .lec .cta-logo { max-width: 180px; margin-top: 40px; }
+}
+</style>
+<!-- ===== TOP SECTION ===== -->
+<section class="hanajob_wrap" style="padding: 40px 0;">
+<div class="hanajob_top_wrap compad">
+<div class="w1230" style="max-width: 1230px; margin: 0 auto; padding: 0 20px;">
+<div class="hanajob_top">
+<div class="hanajob_top_img">
+<!-- ★ 포스터 나오면 아래 <div class="lec-poster"> ... </div> 전체를 <img src="/data/file/포스터파일.jpg" alt="명사 특강 시리즈 포스터" /> 로 교체 -->
+<div class="lec-poster">
+<span class="pp-top">하나 파워 온 세컨드 라이프 × 하나더넥스트</span>
+<span class="pp-mid"><span class="pp-sub">인생 2막을 바꿀 네 번의 수요일</span><span class="pp-title">명사 특강<br />시리즈</span></span>
+<span class="pp-keys"><span class="lec-v1">일</span><span class="lec-v2">돈</span><span class="lec-v3">마음</span><span class="lec-v4">AI</span></span>
+<span class="pp-date">2026. 10. 28 ~ 12. 9 · 격주 수요일 총 4회</span>
+</div>
+</div>
+<div class="hanajob_top_con">
+<div>
+<span class="lec-top-eyebrow">하나 파워 온 세컨드 라이프 × 하나더넥스트</span>
+<h1>2026 명사 특강 시리즈</h1>
+<p class="lec-top-desc">前 구글코리아 상무부터 국내 대표 인지심리학자까지,<br />명사 4인이 전하는 인생 2막의 네 가지 이야기</p>
+<div class="lec-top-keys"><span class="lec-v1">일</span><span class="lec-v2">돈</span><span class="lec-v3">마음</span><span class="lec-v4">AI</span></div>
+</div>
+<dl class="hanajob_top_info_dl">
+<dt>일 정</dt>
+<dd>2026. 10. 28.(수) ~ 12. 9.(수)<br />격주 수요일, 총 4회</dd>
+</dl>
+<dl class="hanajob_top_info_dl">
+<dt>시 간</dt>
+<dd>회당 90분<br />회차별 10:00 또는 14:00 시작</dd>
+</dl>
+<dl class="hanajob_top_info_dl">
+<dt>장 소</dt>
+<dd>하나더넥스트 라운지<br />주엽 · 영등포 · 야탑 (회차별 상이)</dd>
+</dl>
+<dl class="hanajob_top_info_dl">
+<dt>연 사</dt>
+<dd>신철호 · 이하영 · 김경일 · 조용민</dd>
+</dl>
+<!-- ★ 대상 · 참가비 확인 필요 -->
+<dl class="hanajob_top_info_dl">
+<dt>대 상</dt>
+<dd>인생 2막을 준비하는 중장년 누구나</dd>
+</dl>
+<dl class="hanajob_top_info_dl">
+<dt>참가비</dt>
+<dd>무료</dd>
+</dl>
+<dl class="hanajob_top_info_dl">
+<dt>주 최</dt>
+<dd><img class="logo" src="/data/file/fe71c80179e2e4f394935ddcf3dd1c67.png" alt="하나금융그룹" /></dd>
+</dl>
+<p class="lec-top-note">※ 신청 현황에 따라 모집이 조기 마감될 수 있습니다.</p>
+<!-- ★ 신청 링크 입력 -->
+<div class="hanajob_top_btn"><a href="#" target="_blank" rel="noopener">특강 신청하기</a></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="lec"><!-- ===== HOOK : 명사 특강 시리즈란? ===== -->
+<div class="hook">
+<div class="inner">
+<span class="hook-pill">명사 특강 시리즈란?</span>
+<h2 class="hook-title">인생 2막, 누구나 한 번쯤 품는<br /><em>네 가지 질문</em></h2>
+<p class="hook-desc">그 답을 각 분야 대표 명사에게 직접 듣는 시간, 네 번의 수요일에 만나보세요.</p>
+<div class="q-grid">
+<a class="q-tile lec-v1" href="#lec-vol1"><span class="q-key">일</span><span class="q-txt">퇴직 후에도 나는<br />계속 일할 수 있을까?</span><span class="q-who"><span class="q-who-lbl">답하는 명사</span>중장년 커리어 전문가</span></a>
+<a class="q-tile lec-v2" href="#lec-vol2"><span class="q-key">돈</span><span class="q-txt">월급이 끊겨도<br />내 자산은 괜찮을까?</span><span class="q-who"><span class="q-who-lbl">답하는 명사</span>의사 출신 작가</span></a>
+<a class="q-tile lec-v3" href="#lec-vol3"><span class="q-key">마음</span><span class="q-txt">인생 이모작, 어떤<br />마음으로 시작할까?</span><span class="q-who"><span class="q-who-lbl">답하는 명사</span>국내 대표 인지심리학자</span></a>
+<a class="q-tile lec-v4" href="#lec-vol4"><span class="q-key">AI</span><span class="q-txt">AI, 나도 내 편으로<br />쓸 수 있을까?</span><span class="q-who"><span class="q-who-lbl">답하는 명사</span>前 구글코리아 상무</span></a>
+</div>
+</div>
+</div>
+<!-- ===== LINE UP : 명사 & 특강 소개 ===== -->
+<div class="sec lu-sec">
+<div class="inner">
+<span class="eyebrow">LINE UP</span>
+<h2 class="stit">네 가지 질문에 답할 명사 4인</h2>
+<p class="sdesc">각 분야를 대표하는 명사가 인생 2막의 길을 안내합니다</p>
+<div class="lu-list"><!-- VOL.01 일 -->
+<div class="lu-row lec-v1" id="lec-vol1">
+<div class="lu-cover">
+<div class="lu-vol">VOL.01 <span class="lu-field">커리어 설계</span></div>
+<div class="lu-key">일</div>
+<p class="lu-tease">13년째 중장년의 인생 2막을 돕는<br />사회적기업 대표</p>
+</div>
+<div class="lu-body">
+<div class="lu-meta"><span class="lu-chip">10. 28.(수) 10:00 ~ 11:30</span><span class="lu-chip">주엽 라운지</span></div>
+<h3 class="lu-title"><span class="lu-title-key">일</span>변하는 일자리, 나의 다음 커리어</h3>
+<ul class="lu-points">
+<li>변화하는 중장년 일자리 트렌드 탐색</li>
+<li>개인 맞춤형 지속가능한 커리어 생태계 로드맵</li>
+</ul>
+<div class="lu-speaker"><!-- ★ 연사 사진: <span class="sp-ava">신</span> 을 <img class="sp-ava" src="/data/file/사진.jpg" alt="신철호" /> 로 교체 --><span class="sp-ava">신</span>
+<p class="sp-name">신철호 <span class="sp-role">㈜상상우리 대표</span></p>
+</div>
+<ul class="sp-career">
+<li>2013년 ㈜상상우리 창업 — 중장년 인생 2막 지원 사회적기업, 13년째 운영</li>
+<li>고용노동부·서울시50플러스재단·현대자동차 ‘굿잡5060’ 프로젝트 운영</li>
+<li>4050 경력인재 채용 플랫폼 ‘워크위즈’ 론칭(2020)</li>
+<li>중장년 이력서·면접·진로설계 분야 10년 이상 강의</li>
+</ul>
+</div>
+</div>
+<!-- VOL.02 돈 -->
+<div class="lu-row lec-v2" id="lec-vol2">
+<div class="lu-cover">
+<div class="lu-vol">VOL.02 <span class="lu-field">경제·재테크</span></div>
+<div class="lu-key">돈</div>
+<p class="lu-tease">‘부(富)의 마인드셋’을 전하는<br />의사 출신 작가</p>
+</div>
+<div class="lu-body">
+<div class="lu-meta"><span class="lu-chip">11. 11.(수) 14:00 ~ 15:30</span><span class="lu-chip">영등포 라운지</span></div>
+<h3 class="lu-title"><span class="lu-title-key">돈</span>은퇴 후에도 줄지 않는 자산</h3>
+<ul class="lu-points">
+<li>은퇴 후 안정적인 중장년 자산관리 포트폴리오 다각화</li>
+<li>부를 만드는 실전 방법</li>
+</ul>
+<div class="lu-speaker"><span class="sp-ava">이</span>
+<p class="sp-name">이하영 <span class="sp-role">작가 · 의사</span></p>
+</div>
+<ul class="sp-career">
+<li>의사 출신 작가 — 포항공대 수학 전공 후 의대 진학, 삼성서울병원 전문의 취득</li>
+<li>개원 후 자산을 일군 경험을 바탕으로 ‘부(富)의 마인드셋’ 강연</li>
+<li>저서 『나는 나의 스무 살을 가장 존중한다』 『인생의 연금술』 『말은 운명을 데려온다』</li>
+<li>유튜브 ‘이하영의 프레젠트’ 운영</li>
+</ul>
+</div>
+</div>
+<!-- VOL.03 마음 -->
+<div class="lu-row lec-v3" id="lec-vol3">
+<div class="lu-cover">
+<div class="lu-vol">VOL.03 <span class="lu-field">철학·마인드셋</span></div>
+<div class="lu-key">마음</div>
+<p class="lu-tease">〈어쩌다 어른〉 〈세바시〉의<br />국내 대표 인지심리학자</p>
+</div>
+<div class="lu-body">
+<div class="lu-meta"><span class="lu-chip">11. 25.(수) 10:00 ~ 11:30</span><span class="lu-chip">영등포 라운지</span></div>
+<h3 class="lu-title"><span class="lu-title-key">마음</span>인생 이모작을 설계하는 마인드셋</h3>
+<ul class="lu-points">
+<li>중장년 세대의 현명한 소통 공식</li>
+<li>인생 이모작을 설계하는 뉴 에이징 마인드셋</li>
+</ul>
+<div class="lu-speaker"><span class="sp-ava">김</span>
+<p class="sp-name">김경일 <span class="sp-role">아주대 교수</span></p>
+</div>
+<ul class="sp-career">
+<li>국내 대표 인지심리학자 — 고려대 심리학과 졸업, 미국 텍사스대 인지심리학 박사</li>
+<li>2006년부터 아주대 심리학과 교수 — 판단·의사결정·창의성 연구</li>
+<li>게임문화재단 이사장, 게임과학연구원 원장</li>
+<li>〈어쩌다 어른〉 〈세바시〉 등 출연 / 저서 『지혜의 심리학』 『적정한 삶』 『김경일의 지혜로운 인간생활』</li>
+</ul>
+</div>
+</div>
+<!-- VOL.04 AI -->
+<div class="lu-row lec-v4" id="lec-vol4">
+<div class="lu-cover">
+<div class="lu-vol">VOL.04 <span class="lu-field">AI 트렌드</span></div>
+<div class="lu-key">AI</div>
+<p class="lu-tease">前 구글코리아 상무,<br />現 언바운드랩 대표</p>
+</div>
+<div class="lu-body">
+<div class="lu-meta"><span class="lu-chip">12. 9.(수) 14:00 ~ 15:30</span><span class="lu-chip">야탑 라운지</span></div>
+<h3 class="lu-title"><span class="lu-title-key">AI</span>AI를 파트너로 쓰는 법</h3>
+<ul class="lu-points">
+<li>초지능·생성형 AI 시대의 생존 전술</li>
+<li>AI 툴을 비즈니스 파트너로 활용하는 비법</li>
+</ul>
+<div class="lu-speaker"><span class="sp-ava">조</span>
+<p class="sp-name">조용민 <span class="sp-role">언바운드랩 대표</span></p>
+</div>
+<ul class="sp-career">
+<li>前 구글코리아 상무 — 액센츄어·IBM·삼성전자를 거쳐 구글 파트너십 총괄</li>
+<li>2020년 구글 아시아태평양 베스트 롤모델 팀리더 선정</li>
+<li>現 언바운드랩 대표 — AI 딥테크·커머스 AI 초기 스타트업 투자</li>
+<li>연세대 공과대학 겸임교수 / 저서 『언바운드』 『언리시』 『언락 AI』</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ===== SCHEDULE ===== -->
+<div class="sec">
+<div class="inner">
+<span class="eyebrow">SCHEDULE</span>
+<h2 class="stit">특강 일정 한눈에 보기</h2>
+<p class="sdesc">10월부터 12월까지, 격주 수요일에 만나요</p>
+<div class="sc-stats"><span class="sc-stat">총 <b>4회</b></span><span class="sc-stat">회당 <b>90분</b></span><span class="sc-stat"><b>격주 수요일</b></span><span class="sc-stat">하나더넥스트 라운지 <b>3곳</b></span></div>
+<div class="sc-grid">
+<div class="sc-card lec-v1"><span class="sc-date"><span class="sc-month">10월</span><span class="sc-day">28</span><span class="sc-dow">수요일</span></span><span class="sc-info"><span class="sc-vol">VOL.01 · 일</span><span class="sc-who">신철호 대표</span><span class="sc-time">10:00 ~ 11:30</span><span class="sc-where">주엽 라운지</span></span></div>
+<div class="sc-card lec-v2"><span class="sc-date"><span class="sc-month">11월</span><span class="sc-day">11</span><span class="sc-dow">수요일</span></span><span class="sc-info"><span class="sc-vol">VOL.02 · 돈</span><span class="sc-who">이하영 작가</span><span class="sc-time">14:00 ~ 15:30</span><span class="sc-where">영등포 라운지</span></span></div>
+<div class="sc-card lec-v3"><span class="sc-date"><span class="sc-month">11월</span><span class="sc-day">25</span><span class="sc-dow">수요일</span></span><span class="sc-info"><span class="sc-vol">VOL.03 · 마음</span><span class="sc-who">김경일 교수</span><span class="sc-time">10:00 ~ 11:30</span><span class="sc-where">영등포 라운지</span></span></div>
+<div class="sc-card lec-v4"><span class="sc-date"><span class="sc-month">12월</span><span class="sc-day">9</span><span class="sc-dow">수요일</span></span><span class="sc-info"><span class="sc-vol">VOL.04 · AI</span><span class="sc-who">조용민 대표</span><span class="sc-time">14:00 ~ 15:30</span><span class="sc-where">야탑 라운지</span></span></div>
+</div>
+<p class="sc-note">※ 장소 : 하나더넥스트 라운지 주엽(경기 고양) · 영등포(서울) · 야탑(경기 성남)<br />※ 연사 및 현장 사정에 따라 일정과 내용이 변경될 수 있습니다.</p>
+</div>
+</div>
+<!-- ===== CTA ===== -->
+<div class="cta">
+<div class="inner">
+<p class="cta-eyebrow">하나 파워 온 세컨드 라이프 × 하나더넥스트 명사 특강 시리즈</p>
+<h2 class="cta-title">네 번의 수요일,<br />인생 2막이 달라집니다</h2>
+<div class="cta-keys"><span class="lec-v1">일</span><span class="lec-v2">돈</span><span class="lec-v3">마음</span><span class="lec-v4">AI</span></div>
+<p class="cta-desc">각 분야 대표 명사의 이야기를 가장 가까이에서 들어보세요.</p>
+<!-- ★ 신청 링크 입력 --><a class="cta-btn" href="#" target="_blank" rel="noopener">특강 신청하기</a> <img class="cta-logo" src="/data/file/aa9f746b92fd073cbebb732f5d1777d7.png" alt="하나금융" /></div>
+</div>
+</div>
+<!-- /.lec -->
