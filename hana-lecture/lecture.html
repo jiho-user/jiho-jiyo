@@ -13,6 +13,12 @@
 }
 .hw a { text-decoration: none; }
 .hw .nb, .hanajob_wrap .nb { white-space: nowrap; }
+
+/* 키워드별 색 (일 · 돈 · 마음 · AI) */
+.hw .k1, .hanajob_wrap .k1 { --kc: #009178; --kt: #D7EDE6; }  /* 일   : Hana Green */
+.hw .k2, .hanajob_wrap .k2 { --kc: #84754E; --kt: #F4EDD1; }  /* 돈   : Hana Gold · Beige */
+.hw .k3, .hanajob_wrap .k3 { --kc: #E864C1; --kt: #FBE8F5; }  /* 마음 : Hana Digital Pink */
+.hw .k4, .hanajob_wrap .k4 { --kc: #A72DF5; --kt: #EFE3FD; }  /* AI   : Hana Digital Purple */
 .hw .pad { width: 100%; padding: 90px 0; }
 .hw .inner { max-width: 1230px; margin: 0 auto; padding: 0 20px; }
 .hw .stit { font-size: 40px; font-weight: 800; color: #004E42; margin-bottom: 12px; letter-spacing: -0.04em; text-align: center; }
@@ -45,7 +51,7 @@
 .hanajob_wrap .lec-poster .pp-sub { font-size: 22px; font-weight: 700; color: #CEDC00; margin-bottom: 12px; }
 .hanajob_wrap .lec-poster .pp-title { font-size: 72px; font-weight: 900; line-height: 1.1; letter-spacing: -0.04em; }
 .hanajob_wrap .lec-poster .pp-keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
-.hanajob_wrap .lec-poster .pp-keys span { display: flex; align-items: center; justify-content: center; aspect-ratio: 1 / 1; border-radius: 16px; background: #D7EDE6; color: #004E42; font-size: 36px; font-weight: 900; }
+.hanajob_wrap .lec-poster .pp-keys span { display: flex; align-items: center; justify-content: center; aspect-ratio: 1 / 1; border-radius: 16px; background: var(--kt, #D7EDE6); color: var(--kc, #004E42); font-size: 36px; font-weight: 900; }
 .hanajob_wrap .lec-poster .pp-date { font-size: 19px; font-weight: 700; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, 0.25); }
 
 /* ===== INTRO (명사 특강 시리즈란?) ===== */
@@ -62,7 +68,7 @@
 .hw .q-tile.t4 { animation-delay: 6s; }
 .hw .q-grid:hover .q-tile { animation: none; }
 .hw .q-grid .q-tile:hover { transform: translateY(-12px); }
-.hw .q-key { display: flex; align-items: center; justify-content: center; height: 140px; background: #D7EDE6; color: #004E42; font-size: 68px; font-weight: 900; letter-spacing: -0.04em; }
+.hw .q-key { display: flex; align-items: center; justify-content: center; height: 140px; background: var(--kt); color: var(--kc); font-size: 68px; font-weight: 900; letter-spacing: -0.04em; }
 .hw .q-txt { display: block; flex: 1; padding: 22px 14px 26px; font-size: 21px; font-weight: 800; color: #004E42; line-height: 1.45; }
 @keyframes lecUp {
   0%, 25%, 100% { transform: translateY(0); }
@@ -72,14 +78,14 @@
 /* ===== 명사 라인업 ===== */
 .hw .lu-list { display: flex; flex-direction: column; gap: 32px; }
 .hw .lu-row { display: grid; grid-template-columns: 380px 1fr; background: #fff; border: 2px solid #D7EDE6; border-radius: 24px; overflow: hidden; scroll-margin-top: 120px; transition: border-color 0.3s, box-shadow 0.3s; }
-.hw .lu-row:hover { border-color: #009178; box-shadow: 0 15px 30px rgba(0, 78, 66, 0.1); }
+.hw .lu-row:hover { border-color: var(--kc); box-shadow: 0 15px 30px rgba(0, 78, 66, 0.1); }
 .hw .lu-row:nth-child(even) { grid-template-columns: 1fr 380px; }
 .hw .lu-row:nth-child(even) .lu-cover { order: 2; }
-.hw .lu-cover { background: #D7EDE6; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; min-height: 360px; }
-.hw .lu-vol { font-size: 16px; font-weight: 900; color: #004E42; background: #E4D28C; padding: 4px 16px; border-radius: 20px; }
-.hw .lu-key { font-size: 150px; font-weight: 900; line-height: 1; letter-spacing: -0.05em; color: #004E42; }
+.hw .lu-cover { background: var(--kt); padding: 40px; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; min-height: 360px; }
+.hw .lu-vol { font-size: 16px; font-weight: 900; color: #004E42; background: #fff; padding: 4px 16px; border-radius: 20px; }
+.hw .lu-key { font-size: 150px; font-weight: 900; line-height: 1; letter-spacing: -0.05em; color: var(--kc); }
 .hw .lu-key.sm { font-size: 124px; }
-.hw .lu-field { font-size: 24px; font-weight: 800; color: #009178; }
+.hw .lu-field { font-size: 24px; font-weight: 800; color: #004E42; }
 .hw .lu-body { padding: 44px 52px; display: flex; flex-direction: column; justify-content: center; }
 .hw .lu-meta { font-size: 19px; font-weight: 700; color: #009178; margin-bottom: 8px; }
 .hw .lu-title { font-size: 32px; font-weight: 800; color: #111; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 16px; }
@@ -91,6 +97,7 @@
 .hw .sp-name { font-size: 26px; font-weight: 800; color: #111; line-height: 1.35; }
 .hw .sp-name span { font-size: 18px; font-weight: 600; color: #666; margin-left: 6px; }
 .hw .sp-desc { font-size: 18px; color: #555; margin-top: 2px; }
+.hw .lu-hint { display: none; text-align: center; font-size: 17px; color: #888; margin-top: 14px; }
 
 /* ===== 특강 일정 ===== */
 .hw .sc-sec { background: #D7EDE6; }
@@ -102,9 +109,10 @@
 .hw .sc-day { display: block; font-size: 64px; font-weight: 900; color: #004E42; line-height: 1; padding-top: 24px; letter-spacing: -0.03em; }
 .hw .sc-dow { display: block; font-size: 20px; font-weight: 700; color: #009178; margin-top: 8px; }
 .hw .sc-info { display: block; border-top: 1px dashed #A7D8B7; margin: 20px 24px 0; padding: 18px 0 26px; }
-.hw .sc-vol { display: inline-block; font-size: 15px; font-weight: 900; color: #004E42; background: #E4D28C; padding: 3px 12px; border-radius: 20px; }
+.hw .sc-vol { display: inline-block; font-size: 15px; font-weight: 900; color: #004E42; background: var(--kt); padding: 3px 12px; border-radius: 20px; }
 .hw .sc-who { display: block; font-size: 22px; font-weight: 800; color: #111; margin-top: 10px; }
 .hw .sc-where { display: block; font-size: 19px; color: #666; margin-top: 2px; }
+.hw .sc-mtime { display: none; }
 .hw .sc-note { font-size: 17px; color: #777; margin-top: 24px; line-height: 1.8; }
 
 /* ===== CTA ===== */
@@ -138,56 +146,64 @@
   .hanajob_top_info_dl { display: flex !important; align-items: flex-start !important; gap: 10px !important; margin-bottom: 8px !important; }
   .hanajob_top_info_dl dt { width: 76px !important; min-width: 76px !important; font-size: 19px !important; font-weight: 800 !important; color: #004E42 !important; line-height: 1.5 !important; }
   .hanajob_top_info_dl dd { font-size: 19px !important; flex: 1 !important; white-space: normal !important; line-height: 1.6 !important; }
-  .hanajob_wrap .lec-poster { padding: 34px 26px 28px; border-radius: 16px; }
-  .hanajob_wrap .lec-poster .pp-sub { font-size: 18px; }
-  .hanajob_wrap .lec-poster .pp-title { font-size: 52px; }
-  .hanajob_wrap .lec-poster .pp-keys span { font-size: 26px; border-radius: 12px; }
-  .hanajob_wrap .lec-poster .pp-date { font-size: 16px; }
+  .hanajob_wrap .lec-poster { aspect-ratio: 1 / 1; padding: 28px 24px 24px; border-radius: 16px; }
+  .hanajob_wrap .lec-poster .pp-sub { font-size: 17px; margin-bottom: 6px; }
+  .hanajob_wrap .lec-poster .pp-title { font-size: 44px; }
+  .hanajob_wrap .lec-poster .pp-keys span { font-size: 24px; border-radius: 12px; }
+  .hanajob_wrap .lec-poster .pp-date { font-size: 16px; padding-top: 14px; }
 
-  .hw .pad { padding: 60px 0; }
-  .hw .stit { font-size: 30px; }
-  .hw .sdesc { font-size: 18px; margin-bottom: 32px; }
+  .hw .pad { padding: 48px 0; }
+  .hw .stit { font-size: 28px; }
+  .hw .sdesc { font-size: 18px; margin-bottom: 24px; }
 
-  .hw .hook { padding: 60px 20px 64px; }
-  .hw .hook-sub { font-size: 19px; }
-  .hw .hook-title { font-size: 32px; }
-  .hw .hook-desc { font-size: 19px; }
-  .hw .q-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 36px; }
-  .hw .q-key { height: 110px; font-size: 54px; }
-  .hw .q-txt { font-size: 19px; padding: 16px 10px 20px; }
+  .hw .hook { padding: 48px 20px; }
+  .hw .hook-sub { font-size: 18px; margin-bottom: 12px; }
+  .hw .hook-title { font-size: 30px; }
+  .hw .hook-desc { font-size: 18px; margin-top: 12px; }
+  .hw .q-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 28px; }
+  .hw .q-key { height: 80px; font-size: 44px; }
+  .hw .q-txt { font-size: 18px; padding: 12px 8px 14px; }
 
-  .hw .lu-list { gap: 24px; }
-  .hw .lu-row, .hw .lu-row:nth-child(even) { grid-template-columns: 1fr; border-radius: 20px; }
-  .hw .lu-cover { min-height: 0; padding: 26px 24px; gap: 14px; }
-  .hw .lu-key { font-size: 100px; }
-  .hw .lu-key.sm { font-size: 86px; }
-  .hw .lu-field { font-size: 21px; }
-  .hw .lu-body { padding: 26px 22px 28px; }
-  .hw .lu-meta { font-size: 18px; }
-  .hw .lu-title { font-size: 26px; }
-  .hw .lu-points li { font-size: 19px; }
-  .hw .lu-speaker { gap: 14px; }
-  .hw .sp-ava { width: 64px; height: 64px; font-size: 24px; }
-  .hw .sp-name { font-size: 24px; }
-  .hw .sp-name span { font-size: 17px; }
-  .hw .sp-desc { font-size: 18px; }
+  /* 명사 라인업 : 옆으로 넘겨 보기 */
+  .hw .lu-list { flex-direction: row; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 20px; margin: 0 -20px; padding: 0 20px 4px; scrollbar-width: none; }
+  .hw .lu-list::-webkit-scrollbar { display: none; }
+  .hw .lu-row, .hw .lu-row:nth-child(even) { flex: 0 0 86%; grid-template-columns: 1fr; grid-template-rows: auto 1fr; border-radius: 20px; scroll-snap-align: start; }
+  .hw .lu-row:hover { box-shadow: none; }
+  .hw .lu-cover { display: grid; grid-template-columns: auto 1fr; column-gap: 14px; row-gap: 2px; align-items: center; min-height: 0; padding: 16px 20px; }
+  .hw .lu-key, .hw .lu-key.sm { grid-column: 1; grid-row: 1 / 3; font-size: 52px; }
+  .hw .lu-vol { grid-column: 2; grid-row: 1; justify-self: start; font-size: 14px; padding: 2px 12px; }
+  .hw .lu-field { grid-column: 2; grid-row: 2; font-size: 19px; }
+  .hw .lu-body { padding: 20px 20px 22px; justify-content: flex-start; }
+  .hw .lu-meta { font-size: 17px; }
+  .hw .lu-title { font-size: 24px; margin-bottom: 10px; }
+  .hw .lu-points { margin-bottom: 16px; }
+  .hw .lu-points li { font-size: 18px; line-height: 1.6; }
+  .hw .lu-speaker { gap: 12px; padding-top: 16px; margin-top: auto; }
+  .hw .sp-ava { width: 54px; height: 54px; font-size: 21px; }
+  .hw .sp-name { font-size: 22px; }
+  .hw .sp-name span { font-size: 16px; margin-left: 4px; }
+  .hw .sp-desc { font-size: 17px; }
+  .hw .lu-hint { display: block; }
 
-  .hw .sc-grid { grid-template-columns: 1fr; gap: 14px; }
-  .hw .sc-card { display: flex; align-items: stretch; text-align: left; }
-  .hw .sc-date { flex: 0 0 108px; background: #009178; color: #fff; text-align: center; padding: 18px 0; display: flex; flex-direction: column; justify-content: center; }
-  .hw .sc-month { background: none; padding: 0; font-size: 18px; }
-  .hw .sc-day { color: #fff; font-size: 46px; padding-top: 4px; }
-  .hw .sc-dow { color: #fff; font-size: 18px; margin-top: 6px; line-height: 1.4; }
-  .hw .sc-time { display: block; }
-  .hw .sc-info { flex: 1; border-top: none; margin: 0; padding: 18px 18px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
-  .hw .sc-who { font-size: 22px; margin-top: 8px; }
-  .hw .sc-where { font-size: 19px; }
-  .hw .sc-note { font-size: 17px; }
+  /* 특강 일정 : 한 줄 카드 */
+  .hw .sc-grid { grid-template-columns: 1fr; gap: 10px; }
+  .hw .sc-card { display: flex; align-items: stretch; text-align: left; border-radius: 16px; }
+  .hw .sc-date { flex: 0 0 90px; background: #009178; color: #fff; text-align: center; padding: 12px 0; display: flex; flex-direction: column; justify-content: center; }
+  .hw .sc-month { background: none; padding: 0; font-size: 16px; }
+  .hw .sc-day { color: #fff; font-size: 38px; padding-top: 2px; }
+  .hw .sc-dow { color: #fff; font-size: 16px; margin-top: 2px; }
+  .hw .sc-time { display: none; }
+  .hw .sc-mtime { display: inline; }
+  .hw .sc-info { flex: 1; border-top: none; margin: 0; padding: 12px 16px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+  .hw .sc-vol { font-size: 14px; }
+  .hw .sc-who { font-size: 20px; margin-top: 4px; }
+  .hw .sc-where { font-size: 17px; margin-top: 0; }
+  .hw .sc-note { font-size: 16px; margin-top: 16px; }
 
-  .hw .cta { padding: 64px 20px; }
-  .hw .cta h2 { font-size: 30px; }
+  .hw .cta { padding: 52px 20px; }
+  .hw .cta h2 { font-size: 28px; }
   .hw .cta p { font-size: 18px; }
-  .hw .cta a { font-size: 20px; padding: 18px 0; width: 100%; max-width: 360px; }
+  .hw .cta a { font-size: 20px; padding: 17px 0; margin-top: 26px; width: 100%; max-width: 360px; }
 }
 </style>
 <!-- ===== TOP SECTION ===== -->
@@ -199,7 +215,7 @@
 <!-- ★ 포스터 나오면 아래 <div class="lec-poster"> ... </div> 전체를 <img src="/data/file/포스터파일.jpg" alt="명사 특강 시리즈 포스터" /> 로 교체 -->
 <div class="lec-poster">
 <span class="pp-mid"><span class="pp-sub">인생 2막을 바꿀 네 번의 수요일</span><span class="pp-title">명사 특강<br />시리즈</span></span>
-<span class="pp-keys"><span>일</span><span>돈</span><span>마음</span><span>AI</span></span>
+<span class="pp-keys"><span class="k1">일</span><span class="k2">돈</span><span class="k3">마음</span><span class="k4">AI</span></span>
 <span class="pp-date">2026. 10. 28 ~ 12. 9 · 총 4회</span>
 </div>
 </div>
@@ -249,10 +265,10 @@
 <h2 class="hook-title">인생 2막, <span class="nb">누구나 한 번쯤 품는</span><br /><b>네 가지 질문</b></h2>
 <p class="hook-desc">그 답을 명사에게 직접 들어보세요</p>
 <div class="q-grid">
-<a class="q-tile t1" href="#lec-vol1"><span class="q-key">일</span><span class="q-txt">퇴직 후에도<br />일할 수 있을까?</span></a>
-<a class="q-tile t2" href="#lec-vol2"><span class="q-key">돈</span><span class="q-txt">은퇴 후 자산,<br />괜찮을까?</span></a>
-<a class="q-tile t3" href="#lec-vol3"><span class="q-key">마음</span><span class="q-txt">남은 인생, 어떤<br />마음으로 살까?</span></a>
-<a class="q-tile t4" href="#lec-vol4"><span class="q-key">AI</span><span class="q-txt">AI, 나도<br />쓸 수 있을까?</span></a>
+<a class="q-tile t1 k1" href="#lec-vol1"><span class="q-key">일</span><span class="q-txt">퇴직 후에도<br />일할 수 있을까?</span></a>
+<a class="q-tile t2 k2" href="#lec-vol2"><span class="q-key">돈</span><span class="q-txt">은퇴 후 자산,<br />괜찮을까?</span></a>
+<a class="q-tile t3 k3" href="#lec-vol3"><span class="q-key">마음</span><span class="q-txt">남은 인생, 어떤<br />마음으로 살까?</span></a>
+<a class="q-tile t4 k4" href="#lec-vol4"><span class="q-key">AI</span><span class="q-txt">AI, 나도<br />쓸 수 있을까?</span></a>
 </div>
 </div>
 </div>
@@ -262,13 +278,13 @@
 <h2 class="stit">네 가지 질문에 답할 명사</h2>
 <p class="sdesc">각 분야를 대표하는 명사 4인을 소개합니다</p>
 <div class="lu-list"><!-- VOL.01 일 -->
-<div class="lu-row" id="lec-vol1">
+<div class="lu-row k1" id="lec-vol1">
 <div class="lu-cover"><span class="lu-vol">VOL. 01</span>
 <p class="lu-key">일</p>
 <p class="lu-field">커리어 설계</p>
 </div>
 <div class="lu-body">
-<p class="lu-meta">10.28(수) 오전 10시 · 주엽 라운지</p>
+<p class="lu-meta"><span class="nb">10.28(수) 오전 10시</span> · <span class="nb">주엽 라운지</span></p>
 <h3 class="lu-title"><span class="nb">변하는 일자리,</span> <span class="nb">나의 다음 커리어</span></h3>
 <ul class="lu-points">
 <li>변화하는 중장년 일자리 트렌드</li>
@@ -283,13 +299,13 @@
 </div>
 </div>
 <!-- VOL.02 돈 -->
-<div class="lu-row" id="lec-vol2">
+<div class="lu-row k2" id="lec-vol2">
 <div class="lu-cover"><span class="lu-vol">VOL. 02</span>
 <p class="lu-key">돈</p>
 <p class="lu-field">경제·재테크</p>
 </div>
 <div class="lu-body">
-<p class="lu-meta">11.11(수) 오후 2시 · 영등포 라운지</p>
+<p class="lu-meta"><span class="nb">11.11(수) 오후 2시</span> · <span class="nb">영등포 라운지</span></p>
 <h3 class="lu-title"><span class="nb">은퇴 후에도</span> <span class="nb">줄지 않는 자산</span></h3>
 <ul class="lu-points">
 <li>은퇴 후 안정적인 자산관리 포트폴리오</li>
@@ -304,13 +320,13 @@
 </div>
 </div>
 <!-- VOL.03 마음 -->
-<div class="lu-row" id="lec-vol3">
+<div class="lu-row k3" id="lec-vol3">
 <div class="lu-cover"><span class="lu-vol">VOL. 03</span>
 <p class="lu-key sm">마음</p>
 <p class="lu-field">철학·마인드셋</p>
 </div>
 <div class="lu-body">
-<p class="lu-meta">11.25(수) 오전 10시 · 영등포 라운지</p>
+<p class="lu-meta"><span class="nb">11.25(수) 오전 10시</span> · <span class="nb">영등포 라운지</span></p>
 <h3 class="lu-title"><span class="nb">인생 이모작을</span> <span class="nb">설계하는 마인드셋</span></h3>
 <ul class="lu-points">
 <li>중장년 세대의 현명한 소통 공식</li>
@@ -325,13 +341,13 @@
 </div>
 </div>
 <!-- VOL.04 AI -->
-<div class="lu-row" id="lec-vol4">
+<div class="lu-row k4" id="lec-vol4">
 <div class="lu-cover"><span class="lu-vol">VOL. 04</span>
 <p class="lu-key">AI</p>
 <p class="lu-field">AI 트렌드</p>
 </div>
 <div class="lu-body">
-<p class="lu-meta">12.9(수) 오후 2시 · 야탑 라운지</p>
+<p class="lu-meta"><span class="nb">12.9(수) 오후 2시</span> · <span class="nb">야탑 라운지</span></p>
 <h3 class="lu-title"><span class="nb">AI를 파트너로</span> <span class="nb">쓰는 법</span></h3>
 <ul class="lu-points">
 <li>초지능·생성형 AI 시대의 생존 전술</li>
@@ -346,6 +362,7 @@
 </div>
 </div>
 </div>
+<p class="lu-hint">옆으로 넘겨 보세요 →</p>
 </div>
 </div>
 <!-- ===== 특강 일정 ===== -->
@@ -354,10 +371,10 @@
 <h2 class="stit">특강 일정</h2>
 <p class="sdesc">격주 수요일, 총 4회 진행합니다</p>
 <div class="sc-grid">
-<div class="sc-card"><span class="sc-date"><span class="sc-month">10월</span><span class="sc-day">28</span><span class="sc-dow">수요일 <span class="sc-time">오전 10시</span></span></span><span class="sc-info"><span class="sc-vol">VOL. 01 · 일</span><span class="sc-who">신철호 대표</span><span class="sc-where">주엽 라운지</span></span></div>
-<div class="sc-card"><span class="sc-date"><span class="sc-month">11월</span><span class="sc-day">11</span><span class="sc-dow">수요일 <span class="sc-time">오후 2시</span></span></span><span class="sc-info"><span class="sc-vol">VOL. 02 · 돈</span><span class="sc-who">이하영 작가</span><span class="sc-where">영등포 라운지</span></span></div>
-<div class="sc-card"><span class="sc-date"><span class="sc-month">11월</span><span class="sc-day">25</span><span class="sc-dow">수요일 <span class="sc-time">오전 10시</span></span></span><span class="sc-info"><span class="sc-vol">VOL. 03 · 마음</span><span class="sc-who">김경일 교수</span><span class="sc-where">영등포 라운지</span></span></div>
-<div class="sc-card"><span class="sc-date"><span class="sc-month">12월</span><span class="sc-day">9</span><span class="sc-dow">수요일 <span class="sc-time">오후 2시</span></span></span><span class="sc-info"><span class="sc-vol">VOL. 04 · AI</span><span class="sc-who">조용민 대표</span><span class="sc-where">야탑 라운지</span></span></div>
+<div class="sc-card"><span class="sc-date"><span class="sc-month">10월</span><span class="sc-day">28</span><span class="sc-dow">수요일 <span class="sc-time">오전 10시</span></span></span><span class="sc-info"><span class="sc-vol k1">VOL. 01 · 일</span><span class="sc-who">신철호 대표</span><span class="sc-where"><span class="sc-mtime">오전 10시 · </span>주엽 라운지</span></span></div>
+<div class="sc-card"><span class="sc-date"><span class="sc-month">11월</span><span class="sc-day">11</span><span class="sc-dow">수요일 <span class="sc-time">오후 2시</span></span></span><span class="sc-info"><span class="sc-vol k2">VOL. 02 · 돈</span><span class="sc-who">이하영 작가</span><span class="sc-where"><span class="sc-mtime">오후 2시 · </span>영등포 라운지</span></span></div>
+<div class="sc-card"><span class="sc-date"><span class="sc-month">11월</span><span class="sc-day">25</span><span class="sc-dow">수요일 <span class="sc-time">오전 10시</span></span></span><span class="sc-info"><span class="sc-vol k3">VOL. 03 · 마음</span><span class="sc-who">김경일 교수</span><span class="sc-where"><span class="sc-mtime">오전 10시 · </span>영등포 라운지</span></span></div>
+<div class="sc-card"><span class="sc-date"><span class="sc-month">12월</span><span class="sc-day">9</span><span class="sc-dow">수요일 <span class="sc-time">오후 2시</span></span></span><span class="sc-info"><span class="sc-vol k4">VOL. 04 · AI</span><span class="sc-who">조용민 대표</span><span class="sc-where"><span class="sc-mtime">오후 2시 · </span>야탑 라운지</span></span></div>
 </div>
 <p class="sc-note">※ 하나더넥스트 라운지 <span class="nb">주엽(고양)</span> · <span class="nb">영등포(서울)</span> · <span class="nb">야탑(성남)</span><br />※ 상기 일정 및 내용은 변경될 수 있습니다.</p>
 </div>
