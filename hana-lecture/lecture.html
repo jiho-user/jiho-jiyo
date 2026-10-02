@@ -46,6 +46,11 @@
 .hanajob_top_btn a { display: block !important; width: 100% !important; text-align: center !important; background: #009178 !important; color: #ffffff !important; font-size: 21px !important; font-weight: 800 !important; padding: 18px 0 !important; border-radius: 8px !important; text-decoration: none !important; transition: background 0.3s !important; box-shadow: none !important; border: none !important; }
 .hanajob_top_btn a:hover { background: #004E42 !important; }
 
+/* 페이지 제목 아래 간격 : 사이트 기본 여백을 없애고 다른 페이지처럼 30px 만 띄운다 */
+p:has(+ style + #lec-top) { display: none !important; }
+#lec-top { margin-top: 0 !important; padding-top: 30px !important; }
+#lec-top .hanajob_top_wrap, #lec-top .hanajob_top_wrap > .w1230, #lec-top .hanajob_top { margin-top: 0 !important; padding-top: 0 !important; }
+
 /* 포스터 슬라이드 (옆으로 넘기기) */
 .hanajob_wrap .lec-slider { position: relative; width: 100%; min-width: 0; }
 .hanajob_wrap .lec-slides { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: #009178 #D7EDE6; }
@@ -199,7 +204,7 @@
 }
 </style>
 <!-- ===== TOP SECTION ===== -->
-<section class="hanajob_wrap" style="padding: 30px 0 40px;">
+<section id="lec-top" class="hanajob_wrap" style="padding: 30px 0 40px;">
 <div class="hanajob_top_wrap compad">
 <div class="w1230" style="max-width: 1230px; margin: 0 auto; padding: 0 20px;">
 <div class="hanajob_top">
@@ -377,6 +382,20 @@
 <!-- /.hw -->
 <p>
 <script>
+/* 사이트 기본 여백이 남아 있으면 페이지 제목 아래 간격을 30px 로 맞춘다 */
+(function () {
+  var sec = document.getElementById('lec-top');
+  var row = sec && sec.querySelector('.hanajob_top');
+  if (!row) return;
+  function fit() {
+    row.style.removeProperty('margin-top');
+    var extra = row.getBoundingClientRect().top - sec.getBoundingClientRect().top - 30;
+    if (extra > 1) row.style.setProperty('margin-top', -extra + 'px', 'important');
+  }
+  fit();
+  window.addEventListener('load', fit);
+  window.addEventListener('resize', fit);
+})();
 (function () {
   var box = document.querySelector('.lec-slider');
   if (!box) return;
